@@ -1,0 +1,73 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    src: url('~assets/fonts/Audiowide-Regular.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+}
+
+.first {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(0deg, #1d1d1d, #211e1d, #2d221e, #3d271f, #522d20, #693321, #823a22, #9a4023, #b04523, #c34922, #cf4b22, #d44c22);
+}
+
+.second,
+.third,
+.fourth {
+    height: 100vh;
+    width: 100%;
+    background: #1d1d1d;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.nav-menu {
+    margin-left: 4rem;
+}
+
+.nav-item {
+    font: 30px Audiowide;
+    color: white;
+    margin-right: 2rem;
+}
+
+.nav-logo {
+    width: auto;
+    height: 4rem;
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin-left: auto;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font: 24px Audiowide;
+    color: #FFFFFF;
+    text-align: center;
+    border: solid white 3px;
+    transition: all 0.2s;
+}
+
+a.button:hover {
+    background-color: white;
+    color: #1d1d1d
+}
+
+@media all and (max-width:30em) {
+    a.button {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
