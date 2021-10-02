@@ -1,29 +1,50 @@
 /* Fonts */
 
 @font-face {
-    font-family: 'Audiowide';
+    font-family: 'HighSchool';
     font-style: normal;
     font-weight: 400;
-    src: url('~assets/fonts/Audiowide-Regular.ttf') format('truetype');
+    src: url('~assets/fonts/HighSchoolUsa.ttf') format('truetype');
 }
 
 body {
     margin: 0;
 }
 
-.first {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(0deg, #1d1d1d, #211e1d, #2d221e, #3d271f, #522d20, #693321, #823a22, #9a4023, #b04523, #c34922, #cf4b22, #d44c22);
+.divider-svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 82px;
+    transform: rotateY(180deg);
 }
 
-.second,
-.third,
-.fourth {
-    height: 100vh;
+section {
+    min-height: 106vh;
     width: 100%;
-    background: #1d1d1d;
 }
+
+section:nth-child(1) {
+    background-color: #648a47;
+}
+
+section:nth-child(2) {
+    background: #10150b;
+    fill: #648a47;
+}
+
+section:nth-child(3) {
+    background-color: #648a47;
+    fill: #10150b;
+}
+
+section:nth-child(4) {
+    background-color: #10150b;
+    fill: #648a47;
+}
+
+
+/* First Section */
 
 .nav {
     display: flex;
@@ -36,14 +57,56 @@ body {
 }
 
 .nav-item {
-    font: 30px Audiowide;
+    font: 30px HighSchool;
     color: white;
     margin-right: 2rem;
 }
 
 .nav-logo {
     width: auto;
-    height: 4rem;
+    height: 8rem;
+}
+
+.title {
+    font: 40px HighSchool;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.concept {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.concept_text {
+    font: 38px HighSchool;
+    color: white;
+    margin: 10rem 0 0rem 9rem;
+}
+
+.mint {
+    text-align: center;
+    margin-top: 40vh;
+}
+
+.about {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about_image {
+    height: 25rem;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.about_text {
+    color: white;
+    font: 24px "Arial";
+    margin: 0;
 }
 
 a.button {
@@ -53,7 +116,7 @@ a.button {
     border-radius: 2em;
     box-sizing: border-box;
     text-decoration: none;
-    font: 24px Audiowide;
+    font: 24px HighSchool;
     color: #FFFFFF;
     text-align: center;
     border: solid white 3px;
@@ -70,4 +133,12 @@ a.button:hover {
         display: block;
         margin: 0.2em auto;
     }
+}
+
+.team {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
