@@ -1,16 +1,8 @@
 <template>
   <div>
     <section class="">
-      <div class="nav">
-        <img class="nav-logo" src="~/assets/images/logo.png" />
-        <div class="nav-menu">
-          <a class="nav-item">About</a>
-          <a class="nav-item">Roadmap</a>
-          <a class="nav-item">Team</a>
-          <a class="nav-item">Provenance</a>
-        </div>
-        <a href="something" class="button">Connect Wallet</a>
-      </div>
+      <NavBar /> 
+    
       <div class="concept">
         <p class="concept_text">
           A Collection of 10.000 NFTs that let you play football with play2earn mechanics.
@@ -100,12 +92,14 @@
 </template>
 
 <script>
+import NavBar from "@/components/NavBar.vue";
 import RoadmapGoal from "@/components/RoadmapGoal.vue";
 import Divider from "@/components/Divider.vue";
 import TeamCard from "@/components/TeamCard.vue";
 
 export default {
   components: {
+    NavBar,
     RoadmapGoal,
     TeamCard,
     Divider,

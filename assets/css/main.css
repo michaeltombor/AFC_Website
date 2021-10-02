@@ -46,27 +46,6 @@ section:nth-child(4) {
 
 /* First Section */
 
-.nav {
-    display: flex;
-    align-items: center;
-    padding: 1rem 1rem;
-}
-
-.nav-menu {
-    margin-left: 4rem;
-}
-
-.nav-item {
-    font: 30px HighSchool;
-    color: white;
-    margin-right: 2rem;
-}
-
-.nav-logo {
-    width: auto;
-    height: 8rem;
-}
-
 .title {
     font: 40px HighSchool;
     color: white;
@@ -107,25 +86,6 @@ section:nth-child(4) {
     color: white;
     font: 24px "Arial";
     margin: 0;
-}
-
-a.button {
-    display: inline-block;
-    padding: 0.3em 1.2em;
-    margin-left: auto;
-    border-radius: 2em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font: 24px HighSchool;
-    color: #FFFFFF;
-    text-align: center;
-    border: solid white 3px;
-    transition: all 0.2s;
-}
-
-a.button:hover {
-    background-color: white;
-    color: #1d1d1d
 }
 
 @media all and (max-width:30em) {
