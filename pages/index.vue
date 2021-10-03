@@ -1,59 +1,51 @@
 <template>
   <div>
-    <section class="">
-      <NavBar /> 
-    
-      <div class="concept">
-        <p class="concept_text">
-          A Collection of 10.000 NFTs that let you play football with play2earn mechanics.
-        </p>
-        <div class="concept_animation"></div>
+    <section>
+      <NavBar />
+      <div>
+        <div class="flex flex-col">
+          <img class="my-4" src="~/assets/images/field.png" />
+          <p class="mx-8 text-center intro">
+            A Collection of 10.000 Apes that let you play football with play2earn
+            mechanics.
+          </p>
+        </div>
       </div>
-      <div class="mint">
+
+      <div class="mint mt-8">
         <a href="something" class="button"
-          >Coming Soon <i class="fas fa-football-ball"></i
+          >Mint Soon <i class="fas fa-football-ball"></i
         ></a>
       </div>
     </section>
     <section>
-      <svg
-        class="divider-svg"
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-      </svg>
-      <h1 class="title">About the Ape Football Club</h1>
+      <Divider />
 
-      <div class="about">
-        <img class="about_image" src="~/assets/images/afc1.png" />
-        <p class="about_text">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-          vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-          no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-          sanctus est Lorem ipsum dolor sit amet.
-        </p>
+      <div class="container m-auto px-8 pt-8">
+        <h1 class="title">The Ape Football Club</h1>
+        <div class="grid md:grid-flow-col  about pb-12">
+          <div class="pr-8 m-auto">
+            <p class="about_text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+              clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+              amet. Lorem ipsum dolor si voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor si
+            </p>
+            <a class="button mt-4">Join our Discord</a>
+          </div>
+          <ApeSlider class="mt-8"/>
+        </div>
       </div>
     </section>
     <section>
-      <svg
-        class="divider-svg"
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-      </svg>
+      <Divider />
       <h1 class="title">The Roadmap</h1>
       <div class="roadmap">
         <RoadmapGoal
+          title=""
           :percentage="10"
           :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
         />
@@ -93,6 +85,8 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import ApeSlider from "@/components/ApeSlider.vue";
+
 import RoadmapGoal from "@/components/RoadmapGoal.vue";
 import Divider from "@/components/Divider.vue";
 import TeamCard from "@/components/TeamCard.vue";
@@ -100,6 +94,7 @@ import TeamCard from "@/components/TeamCard.vue";
 export default {
   components: {
     NavBar,
+    ApeSlider,
     RoadmapGoal,
     TeamCard,
     Divider,

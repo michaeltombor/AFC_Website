@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <div>
     <div class="flex justify-between px-4 py-4">
       <div class="flex space-x-7">
         <div>
@@ -40,7 +40,7 @@
         <a class="nav-item">Provenance</a>
       </div>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>
