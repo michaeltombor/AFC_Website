@@ -4,8 +4,6 @@ stages:
     - deploy
     
 deploy_production:
-    variables:
-      CI_COMMIT_BRANCH: $CI_COMMIT_BRANCH
     stage: deploy
     before_script:
         - apk add openssh-client # Add SSH client for alpine 
@@ -17,7 +15,7 @@ deploy_production:
         - chmod 700 ~/.ssh
     script:
         # Connecting to the server using SSH and executing commands like pulling updates to the cloned repo
-        - echo $CI_COMMIT_BRANCH
+        - echo ${CI_COMMIT_BRANCH}
         - ssh -o StrictHostKeyChecking=no apefootballclub@apefootball.club "cd /home/apefootballclub/projects/ && git clone -branch git@git.allo.dev:customers/apefootballclub/apefootball.club.git"
         # -o StrictHostKeyCheking=no is to disable strict host key checking in SSH
     only:
