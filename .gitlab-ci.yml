@@ -15,8 +15,7 @@ deploy_production:
         - chmod 700 ~/.ssh
     script:
         # Connecting to the server using SSH and executing commands like pulling updates to the cloned repo
-        - echo $CI_COMMIT_REF_NAME
-        - ssh -o StrictHostKeyChecking=no apefootballclub@apefootball.club "cd /home/apefootballclub/projects/ && git clone -branch git@git.allo.dev:customers/apefootballclub/apefootball.club.git"
+        - ssh -o StrictHostKeyChecking=no apefootballclub@apefootball.club "cd /home/apefootballclub/projects/ && git clone -branch $CI_COMMIT_REF_NAME git@git.allo.dev:customers/apefootballclub/apefootball.club.git"
         # -o StrictHostKeyCheking=no is to disable strict host key checking in SSH
     only:
         - master 
