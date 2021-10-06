@@ -15,7 +15,7 @@ deploy_production:
         - chmod 700 ~/.ssh
     script:
         # Connecting to the server using SSH and executing commands like pulling updates to the cloned repo
-        - ssh -o StrictHostKeyChecking=no apefootballclub@apefootball.club "mkdir /home/apefootballclub/projects/temp/ && cd /home/apefootballclub/projects/temp/ && git clone -b $CI_COMMIT_REF_NAME git@git.allo.dev:customers/apefootballclub/apefootball.club.git && rm -rf /home/apefootballclub/projects/apefootball.club/ && mv /home/apefootballclub/projects/temp/apefootball.club /home/apefootballclub/projects/apefootball.club/ && cd /home/apefootballclub/projects/apefootball.club/ && npm install && pm2 start"
+        - ssh -o StrictHostKeyChecking=no apefootballclub@apefootball.club "mkdir /home/apefootballclub/projects/temp/ && cd /home/apefootballclub/projects/temp/ && git clone -b $CI_COMMIT_REF_NAME git@git.allo.dev:customers/apefootballclub/apefootball.club.git && rm -rf /home/apefootballclub/projects/apefootball.club/ && mv /home/apefootballclub/projects/temp/apefootball.club /home/apefootballclub/projects/apefootball.club/ && cd /home/apefootballclub/projects/apefootball.club/ && rm -rf /home/apefootballclub/projects/temp/ && npm install && pm2 start"
         # -o StrictHostKeyCheking=no is to disable strict host key checking in SSH
     only:
         - master 
