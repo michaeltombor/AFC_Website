@@ -4,6 +4,8 @@ stages:
     - deploy
     
 deploy_production:
+    variables:
+      CI_COMMIT_BRANCH: $CI_COMMIT_BRANCH
     stage: deploy
     before_script:
         - apk add openssh-client # Add SSH client for alpine 
