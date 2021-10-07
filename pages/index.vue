@@ -21,10 +21,10 @@
     <section>
       <Divider />
 
-      <div class="container m-auto px-8 pt-8">
+      <div class="container m-auto px-8 py-12">
         <h1 class="title">The Ape Football Club</h1>
-        <div class="grid md:grid-flow-col  about pb-12">
-          <div class="pr-8 m-auto">
+        <div class="grid md:grid-flow-col about">
+          <div class="pr-8">
             <p class="about_text">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
               eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -36,39 +36,46 @@
             </p>
             <a class="button mt-4">Join our Discord</a>
           </div>
-          <ApeSlider class="mt-8"/>
+          <ApeSlider class="mt-8" />
         </div>
       </div>
     </section>
     <section>
       <Divider />
-      <h1 class="title">The Roadmap</h1>
-      <div class="roadmap">
-        <RoadmapGoal
-          title=""
-          :percentage="10"
-          :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
-        />
-        <RoadmapGoal
-          :percentage="20"
-          :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
-        />
-        <RoadmapGoal
-          :percentage="40"
-          :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
-        />
-        <RoadmapGoal
-          :percentage="60"
-          :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
-        />
-        <RoadmapGoal
-          :percentage="80"
-          :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
-        />
-        <RoadmapGoal
-          :percentage="100"
-          :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
-        />
+      <div class="container m-auto px-8 py-12">
+        <h1 class="title">The Roadmap</h1>
+        <div class="flex flex-col">
+          <RoadmapGoal
+            title="Test1"
+            :percentage="10"
+            :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
+          />
+          <RoadmapGoal
+            title="Test1"
+            :percentage="20"
+            :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
+          />
+          <RoadmapGoal
+            title="Test1"
+            :percentage="40"
+            :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
+          />
+          <RoadmapGoal
+            title="Test1"
+            :percentage="60"
+            :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
+          />
+          <RoadmapGoal
+            title="Test1"
+            :percentage="80"
+            :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
+          />
+          <RoadmapGoal
+            title="Test1"
+            :percentage="100"
+            :goal="'Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.'"
+          />
+        </div>
       </div>
     </section>
     <section>

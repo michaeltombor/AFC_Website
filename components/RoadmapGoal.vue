@@ -1,6 +1,6 @@
 <template>
-  <div class="roadmapgoal">
-    <div class="circular">
+  <div class="grid grid-rows-2 grid-flow-col gap-4 my-8">
+    <div class="circular row-span-2 mr-4">
       <div class="inner"></div>
       <div class="number">{{ percentage }}%</div>
       <div class="circle">
@@ -12,9 +12,10 @@
         </div>
       </div>
     </div>
-    <p>
-      {{ goal }}
-    </p>
+    <div class="flex flex-col row-span-2">
+      <p class="roadmap_title">{{ title }}</p>
+      <p class="roadmap_goal">{{ goal }}</p>
+    </div>
   </div>
 </template>
 
@@ -22,36 +23,33 @@
 export default {
   props: {
     percentage: Number,
+    title: String,
     goal: String,
   },
 };
 </script>
 
 <style>
-.roadmap {
-  width: 60%;
-  margin: auto;
-  display: grid;
-  row-gap: 1rem;
-}
-
-.roadmapgoal {
-  display: grid;
-  grid-template-columns: 10rem 3fr;
-  align-items: center;
-}
-
-.roadmapgoal p {
+.roadmap_title {
   color: white;
-  font: 18px "Arial";
-  text-align: center;
+  font: 24px HighSchool;
+  margin: 0;
+  text-align: left;
+}
+
+.roadmap_goal {
+  color: white;
+  font: 24px "Arial";
 }
 
 .circular {
   height: 100px;
   width: 100px;
   position: relative;
-  transform: scale(1);
+  transform: scale(0.8);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .circular .inner {
