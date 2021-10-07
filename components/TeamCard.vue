@@ -1,19 +1,15 @@
 <template>
-  <div class="teamcard">
-    <div class="member">
-      <img class="memberimage" src="~/assets/images/afc1.png" />
-      <p class="membername">Allo</p>
-      <p class="memberrole">Developer</p>
-      <div class="memberintro">
-        <p>
-          Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very
-          good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a
-          nice floof, borking doggo.
-        </p>
-      </div>
+  <!-- This is an example component -->
 
-      <div class="membersocials">
-        <a href="https://twitter.com/dev_allo" target="_blank"
+  <div class="member shadow-md max-w-sm mb-5 m-auto h-full">
+    <img :src="require(`@/assets/images/${image}`)" />
+    <div class="p-4">
+      <p class="membername">{{ name }}</p>
+      <p class="memberrole pb-2">{{ position }}</p>
+      <p class="memberintro mt-2">{{ intro }}</p>
+
+    <div class="membersocials mt-4 text-center inline-flex items-center">
+        <a class="mr-2" :href="twitter" target="_blank"
           ><svg
             class="socialicon"
             version="1.1"
@@ -44,7 +40,7 @@
               />
             </g></svg
         ></a>
-        <a
+        <a :href="opensea"
           ><svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M90 45C90 69.8514 69.8514 90 45 90C20.1486 90 0 69.8514 0 45C0 20.1486 20.1486 0 45 0C69.8566 0 90 20.1486 90 45Z"
@@ -66,26 +62,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    name: String,
+    position: String,
+    intro: String,
+    image: String,
+    twitter: String,
+    opensea: String
+  },
+};
 </script>
 
 <style>
-.teamcard {
-  display: flex;
-  width: 30%;
-  margin-right: 3%;
-}
-
 .teamcard:last-child {
   margin-right: 0;
 }
 
 .member {
   background-color: #648a47;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
 }
 
 .membername {
@@ -99,20 +94,14 @@ export default {};
   color: white;
   text-align: center;
   font: 18px HighSchool;
-  margin: 0;
   border-bottom: 4px solid white;
 }
 
 .memberintro {
-  margin: 1rem;
   color: white;
   font: 18px "Arial";
 }
-
-.memberintro p {
-  margin: 0;
-}
-
+  
 .membersocials {
   text-align: center;
   margin-bottom: 1rem;
@@ -120,5 +109,6 @@ export default {};
 
 .membersocials svg {
   height: 34px;
+   
 }
 </style>

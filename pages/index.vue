@@ -80,11 +80,45 @@
     </section>
     <section>
       <Divider />
-      <h1 class="title">The Team</h1>
-      <div class="team">
-        <TeamCard />
-        <TeamCard />
-        <TeamCard />
+      <div class="m-auto px-8 py-12">
+        <h1 class="title">The Team</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <TeamCard
+            name="Omar™"
+            position="Visionary"
+            intro="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. "
+            image="omar.jpg"
+            twitter=""
+            wallet=""
+          />
+          <TeamCard
+            name="Hln_visual"
+            position="Artist"
+            intro="Out of a small 600 person Texas town, Harrison (HLN_Visual) is an illustrator and story teller that dabbles in just about every creative medium. He is most known for his character designs that have gone viral on tiktok and Instagram."
+            image="Hln_visual.jpg"
+            twitter="https://twitter.com/hln_visual"
+            wallet=""
+          />
+          <TeamCard
+            name="Allo"
+            position="Developer"
+            intro="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. "
+            image="allo.jpg"
+            twitter="https://twitter.com/dev_allo"
+            wallet="https://opensea.io/Allo-Dev"
+            class="sm:col-span-4 lg:col-span-1"
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex flex-col text-center pb-4">
+        <img class="h-16 m-auto" src="~/../assets/images/logo.png" />
+        <div class="flex flex-row m-auto my-4 text-white gap-2">
+          <a href="https://twitter.com/ApeFootballClub"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://discord.gg/rByA8538DQ"><i class="fab fa-discord fa-2x"></i></a>
+        </div>
+        <p class="text-white">© ApeFootballClub - Est. 2021</p>
       </div>
     </section>
   </div>
