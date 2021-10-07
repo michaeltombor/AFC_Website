@@ -1,0 +1,21 @@
+# Includes deployment pipeline only
+image: alpine:3.7
+stages:
+    - deploy
+    
+deploy_production:
+    stage: deploy
+    before_script:
+        - apk add openssh-client # Add SSH client for alpine 
+        - eval $(ssh-agent -s) # Run the SSH client 
+        # Adding environment's variable SSH_PRIVATE_KEY to the SSH client's agent that manages the private keys
+        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+        # Create the SSH directory and give it the right permissions
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
+    script:
+        # Connecting to the server using SSH and executing commands like pulling updates to the cloned repo
+        - ssh -o StrictHostKeyChecking=no apefootballclub@apefootball.club "cd /home/apefootballclub/projects/temp/ && git clone -b $CI_COMMIT_REF_NAME git@git.allo.dev:customers/apefootballclub/apefootball.club.git && rm -rf /home/apefootballclub/projects/apefootball.club/ && mv /home/apefootballclub/projects/temp/apefootball.club /home/apefootballclub/projects/apefootball.club/ && cd /home/apefootballclub/projects/apefootball.club/ && npm install && pm2 start"
+        # -o StrictHostKeyCheking=no is to disable strict host key checking in SSH
+    only:
+        - master 
